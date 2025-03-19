@@ -12,7 +12,9 @@ const FeaturedCard: FC<FeaturedCardProps> = ({ title, description, image }) => {
       <div className="relative z-10 p-6 space-y-2">
         <h3>{title}</h3>
         <p>{description}</p>
-        <button className="button-small">Learn more</button>
+        <button className="button-small bg-neutral-10 border-none">
+          Learn more
+        </button>
       </div>
 
       {/* Background image with overlay */}
