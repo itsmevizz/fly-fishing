@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --font-gluten: "Gluten", cursive;
+
+  /* Neutral Colors */
+  --color-neutral-0: #ffffff;
+  --color-neutral-1: #fdfdfb;
+  --color-neutral-2: #fcfcfb;
+  --color-neutral-3: #fafafa;
+  --color-neutral-4: #f9f9f8;
+  --color-neutral-5: #f7f7f6;
+  --color-neutral-10: #dfded0;
+  --color-neutral-20: #c6c5c3;
+  --color-neutral-30: #aeadaa;
+  --color-neutral-40: #969491;
+  --color-neutral-50: #7d7b77;
+  --color-neutral-60: #65625e;
+  --color-neutral-70: #4d4a45;
+  --color-neutral-80: #343128;
+  --color-neutral-90: #1c1812;
+  --color-neutral-100: #000000;
+
+  /* Tan Colors */
+  --color-tan-lighter: #f1ece1;
+  --color-tan-light: #e4d9c3;
+  --color-tan-default: #ddcfb4;
+  --color-tan-dark: #b1a69b;
+  --color-tan-darker: #857c6c;
+
+  /* Brown Colors */
+  --color-brown-lighter: #978f84;
+  --color-brown-light: #746958;
+  --color-brown-default: #514432;
+  --color-brown-dark: #31291e;
+  --color-brown-darker: #201814;
+
+  /* Semantic color variables */
+  --color-primary-light: var(--color-neutral-60); /* #65625E */
+  --color-primary-dark: var(--color-neutral-90); /* #1C1812 */
+
+  /*  */
+  --text-base: 16px;
+  --text-medium: 20px;
+  --text-small: 14px;
+  --text-heading-default: 40px;
+  --text-heading-large: 56px;
+  --text-heading-medium: 48px;
+  --text-heading-small: 32px;
+
+  /*  */
+
+  /* Custom breakpoints */
+  --breakpoints: {
+    xs: 480px;
+    sm: 640px;
+    md: 768px;
+    lg: 1024px;
+    xl: 1280px;
+  }
+
+  /* Container settings for each breakpoint */
+  --container-max-widths: {
+    xs: 480px;
+    sm: 640px;
+    md: 768px;
+    lg: 1024px;
+    xl: 1280px;
+  }
+
+  /* Custom spacing scale */
+  --spacing: {
+    1: 0.0625rem; /* 1px */
+    2: 0.125rem; /* 2px */
+    4: 0.25rem; /* 4px */
+    8: 0.5rem; /* 8px */
+    12: 0.75rem; /* 12px */
+    14: 0.875rem; /* 14px */
+    16: 1rem; /* 16px */
+    20: 1.25rem; /* 20px */
+    24: 1.5rem; /* 24px */
+    32: 2rem; /* 32px */
+    40: 2.5rem; /* 40px */
+    48: 3rem; /* 48px */
+    56: 3.5rem; /* 56px */
+    64: 4rem; /* 64px */
+    72: 4.5rem; /* 72px */
+    80: 5rem; /* 80px */
+    96: 6rem; /* 96px */
+  }
+}
+
+@layer base {
+  body {
+    @apply text-primary-dark text-base font-sans;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  h1 {
+    @apply md:text-heading-large text-heading-default font-semibold leading-[1.125em];
+  }
+  h2 {
+    @apply md:text-heading-medium text-heading-default font-semibold leading-[1.125em];
+  }
+  h3 {
+    @apply text-heading-small font-semibold leading-[1.125em];
+  }
+  p {
+    @apply text-primary-light;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-in forwards;
+  }
+
+  .hover-custom-underline {
+    @apply relative no-underline;
+  }
+  .hover-custom-underline::after {
+    content: "";
+    @apply absolute bottom-[-4px] left-0 w-0 h-[1px] bg-current transition-all duration-200;
+  }
+  .hover-custom-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@utility button-main {
+  @apply text-neutral-5  rounded-sm pt-2 pb-2 pl-3 pr-3 bg-brown-default  hover:-translate-y-1 duration-200;
+}
+@utility button-small {
+  @apply md:bg-neutral-10 bg-neutral-2 md:border-none border border-neutral-40 hover:bg-neutral-20 px-4 py-2 duration-200 hover:text-neutral-4 rounded-sm  transition-colors;
+}
+@utility container {
+  @apply max-w-5xl  flex lg:flex-row flex-col items-center justify-center pl-6 pr-6 lg:pl-0 lg:pr-0;
+}
