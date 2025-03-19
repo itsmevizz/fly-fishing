@@ -21,19 +21,19 @@ const defaultOptions: FeaturedOption[] = [
     title: "Explore Fly Fishing",
     description:
       "Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Tellus in metus vulputate eu sc",
-    image: "/assets/fish-featured.png",
+    image: "./assets/fish-featured.png",
   },
   {
     title: "Fly Fishing Experiences",
     description:
       "Elit pellentesque habitant morbi tristique senectus et netus et. In hendrerit gravida rutrum quisque",
-    image: "/assets/featured02.png",
+    image: "./assets/featured02.png",
   },
   {
     title: "Gear Up and Catch More",
     description:
       "In metus vulputate eu scelerisque felis imperdiet. Nunc scelerisque viverra mauris in aliquam sem.",
-    image: "/assets/featured03.jpg",
+    image: "./assets/featured03.jpg",
   },
 ];
 

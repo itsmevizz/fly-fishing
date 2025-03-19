@@ -15,12 +15,12 @@ const AppHeader = () => {
           {/* Logo */}
           <div>
             <img
-              src="/assets/logo-main.svg"
+              src="./assets/logo-main.svg"
               alt="Logo"
               className="h-10 hidden md:block"
             />
             <img
-              src="/assets/logo-small.svg"
+              src="./assets/logo-small.svg"
               alt="Logo"
               className="h-10 block md:hidden "
             />

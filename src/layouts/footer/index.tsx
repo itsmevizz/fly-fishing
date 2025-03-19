@@ -8,7 +8,7 @@ const AppFooter: FC = () => {
           <div className="flex gap-5">
             {/* Logo */}
             <div className="mb-4 md:mb-0">
-              <img src="/assets/logo-light.svg" alt="Logo" className="h-8" />
+              <img src="./assets/logo-light.svg" alt="Logo" className="h-8" />
             </div>
 
             {/* Nav Links */}
